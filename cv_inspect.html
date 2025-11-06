@@ -1,0 +1,133 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>CV — Inspect in Browser</title>
+  <style>
+    body{font-family:Inter,ui-sans-serif,system-ui,Arial;display:flex;justify-content:center;align-items:center;height:100vh;background:#ffffff;}
+    button{padding:14px 26px;font-size:18px;border-radius:8px;border:1px solid #000;background:#fff;cursor:pointer;font-weight:600;}
+  </style>
+</head>
+<body>
+
+  <button id="showCV">SHOW THE CV 👀</button>
+
+  <script>
+    const cv = {
+      contact: {
+        phone: "+216 52750397",
+        email: "anis.zaatour@outlook.com",
+        location: "Sousse, Tunisia"
+      },
+      name: "Anis Zaatour",
+      title: "SAP Technical Consultant",
+      skills: {
+        technologies: [
+          "SAP Public Cloud", "SAP BTP", "SAP Build Apps", "ABAP", "ABAP RAP",
+          "Adobe Forms", "ERP", "JavaScript", "Typescript", "Node.js", "NestJS",
+          "Express", "HTML5", "CSS", "Bootstrap", "React", "Socket.IO",
+          "MongoDB", "GraphQL", "Firebase", "SQL", "NoSQL", "Git", "Docker",
+          "UML", "OOP", "Unit tests"
+        ],
+        architectures: ["3-System Landscape", "MVC", "CQRS", "Three-tier", "Repository", "Microservices", "MVVM"],
+        tools: ["Jira", "Gitlab"],
+        methodologies: ["SAP Activate", "SCRUM", "Kanban"]
+      },
+      experience: [
+        {
+          role: "SAP Technical Consultant",
+          company: "PwC Technology Acceleration Center",
+          from: "Oct 2023",
+          to: "Present",
+          projects: [
+            {
+              name: "CANIMEX – SAP Public Cloud Project",
+              modules: ["MM", "SD", "QM", "FI", "TM"],
+              contributions: {
+                MM: [
+                  "Developed PO, RFQ, STO, GR forms (OPD)",
+                  "Added & mapped custom fields for procurement data",
+                  "Improved visibility of critical purchasing info",
+                  "Enhanced GR/PO automation & validation"
+                ],
+                SD: [
+                  "Designed customer-facing sales forms",
+                  "Mapped pricing & delivery terms",
+                  "Integrated custom product/customer attributes"
+                ],
+                QM: [
+                  "Redesigned Inspection Lot form",
+                  "Standardized inspection results",
+                  "Enabled quicker quality decisions & audit compliance"
+                ],
+                FI: [
+                  "Developed CBO for payment counters (Method + Currency)",
+                  "Automated uniqueness + correctness"
+                ],
+                TM: [
+                  "Redesigned Bill of Lading (BOL) form",
+                  "Accurate logistics mapping → less disputes"
+                ]
+              }
+            },
+            {
+              name: "SAP Build Apps – Mass Upload for S/4HANA",
+              focus: [
+                "UI workflow for CSV upload",
+                "OData V2 integration",
+                "Error handling + skip existing records",
+                "Firebase Authentication",
+                "SAP BTP deployment"
+              ]
+            },
+            {
+              name: "JOHNVINCE FOOD – SAP Private Cloud",
+              focus: ["BAdIs", "Custom Fields", "Data Extensions", "Adobe OPD Forms", "BAPI Integrations"]
+            }
+          ]
+        },
+        {
+          role: "Back End Developer",
+          company: "Cyber Division",
+          from: "Sep 2022",
+          to: "Sep 2023",
+          achievements: [
+            "Database optimization",
+            "Secure JWT authentication",
+            "Real-time Socket.IO features",
+            "Jira project delivery"
+          ]
+        },
+        {
+          role: "Full Stack Web Developer Intern",
+          company: "Prima-IT Consulting",
+          from: "Jan 2022",
+          to: "Sep 2022",
+          achievements: [
+            "Digital canteen application",
+            "GraphQL + MongoDB backend",
+            "Real-time chat & notifications",
+            "Order management UI"
+          ]
+        }
+      ],
+      education: [
+        "Bachelor in Computer Science — ISET Kairouan",
+        "Software Engineering — ESPRIT"
+      ],
+      languages: { English: "Professional", French: "Professional", Arabic: "Native" },
+      certifications: ["SAP Certified Associate — ABAP Cloud"]
+    };
+
+    document.getElementById('showCV').addEventListener('click', () => {
+      console.clear();
+      console.log("✅ Your CV is now loaded and ready to explore.");
+      console.log("👉 Expand the object below:");
+      console.log(cv);
+      alert("Open DevTools Console → Press F12 or Ctrl+Shift+I");
+    });
+  </script>
+
+</body>
+</html>
